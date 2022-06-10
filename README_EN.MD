@@ -70,13 +70,14 @@ Available args:
    
 ```
 
-##Examples:
+## Example
+
 Style image:
 
-![imgs](style.jpg)
+![imgs](img/readme_style.jpg)
 
 Transform Result:
-![imgs](example.jpg)
+![imgs](img/readme_example.jpg)
 
 To train more styles, try different style images by `--style-path=mystyle.png`
 
