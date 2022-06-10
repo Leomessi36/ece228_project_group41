@@ -104,9 +104,12 @@ def train(**kwargs):
 
             
             style_loss = 0.
+            sw=[1,1,1,1]
+            i=0
             for ft_y, gm_s in zip(features_y, gram_style):
                 gram_y = utils.gram_matrix(ft_y)
-                style_loss += F.mse_loss(gram_y, gm_s.expand_as(gram_y))
+                style_loss +=sw[i]* F.mse_loss(gram_y, gm_s.expand_as(gram_y))
+                i=i+1
             style_loss *= opt.style_weight
 
             total_loss = content_loss + style_loss
